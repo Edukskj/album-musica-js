@@ -165,7 +165,7 @@ function organizaEmLinhasEColunas(albuns) {
 function criaCardHtmlParaAlbum(album) {
   return `
   <div class="card col-4">
-    <a href="${album.link}">
+    <a href="${album.link}" target="_blank">
       <img class="card-img-top"
         src="${album.imagem_da_capa_do_album}"
       alt="">
