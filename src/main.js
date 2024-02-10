@@ -1,125 +1,143 @@
-alert("Olá, seja bem vinda(o) à atividade!")
-
 const meusAlbuns = [
   {
-    "nome_do_album": "Kid A",
-    "nome_da_banda": "Radiohead",
-    "ano_do_album": 2000,
-    "imagem_da_capa_do_album": "https://upload.wikimedia.org/wikipedia/en/0/02/Radioheadkida.png"
+    "nome_do_album": "Dos Prédios Deluxe",
+    "nome_da_banda": "Veigh",
+    "ano_do_album": 2023,
+    "imagem_da_capa_do_album": "https://i.scdn.co/image/ab67616d0000b273ce0947b85c30490447dbbd91",
+    "link": "https://open.spotify.com/intl-pt/album/0D59BFMmnA87oPyk1oSe1b?autoplay=true"
   },
   {
-    "nome_do_album": "Is This It",
-    "nome_da_banda": "The Strokes",
-    "ano_do_album": 2001,
-    "imagem_da_capa_do_album": "https://upload.wikimedia.org/wikipedia/en/0/09/The_Strokes_-_Is_This_It_cover.png"
+    "nome_do_album": "Confia",
+    "nome_da_banda": "Grupo Menos é Mais",
+    "ano_do_album": 2023,
+    "imagem_da_capa_do_album": "https://cdns-images.dzcdn.net/images/cover/dff8386e138eca18ae10bfe307505f68/500x500.jpg",
+    "link": "https://open.spotify.com/intl-pt/track/1jxQZzlx5dcoGhalvryKAA?autoplay=true"
   },
   {
-    "nome_do_album": "Hybrid Theory",
-    "nome_da_banda": "Linkin Park",
-    "ano_do_album": 2000,
-    "imagem_da_capa_do_album": "https://upload.wikimedia.org/wikipedia/pt/2/23/Linkin_Park_Hybrid_Theory.jpg"
+    "nome_do_album": "América Brasil",
+    "nome_da_banda": "Seu Jorge",
+    "ano_do_album": 2007,
+    "imagem_da_capa_do_album": "https://i.scdn.co/image/ab67616d0000b27382b0e4d3c4a8ce89f249731e",
+    "link": "https://open.spotify.com/intl-pt/album/0ooQQDn84CzSsT9c8MFrm1"
   },
   {
-    "nome_do_album": "American Idiot",
-    "nome_da_banda": "Green Day",
-    "ano_do_album": 2004,
-    "imagem_da_capa_do_album": "https://i.discogs.com/CfzrmWDhENP3x0dgH-SqIpv51oRU73LIO_4AB2tVTIg/rs:fit/g:sm/q:90/h:597/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTExMDE1/NDIzLTE1MjI4OTM5/ODctMTEzNS5qcGVn.jpeg"
+    "nome_do_album": "Night Visions",
+    "nome_da_banda": "Imagine Dragons",
+    "ano_do_album": 2012,
+    "imagem_da_capa_do_album": "https://i.scdn.co/image/ab67616d0000b27381eeace38068e9444cb28a3e",
+    "link": "https://open.spotify.com/intl-pt/album/6nxDQi0FeEwccEPJeNySoS"
   },
   {
-    "nome_do_album": "Back to Black",
-    "nome_da_banda": "Amy Winehouse",
+    "nome_do_album": "O Descobridor dos Sete Mares",
+    "nome_da_banda": "Tim Maia",
+    "ano_do_album": 1983,
+    "imagem_da_capa_do_album": "https://i.scdn.co/image/ab67616d0000b273bf96aed03a1e378dad91217b",
+    "link": "https://open.spotify.com/intl-pt/album/7Ff0Q5oeEoVKHtxJJoXyId"
+  },
+  {
+    "nome_do_album": "The Beginning",
+    "nome_da_banda": "Fifty Fifty",
+    "ano_do_album": 2023,
+    "imagem_da_capa_do_album": "https://www.z90.com/wp-content/uploads/2023/05/Fifty-Cover-Web.jpg",
+    "link": "https://open.spotify.com/intl-pt/album/5letLUZIFsQikJYShfGNs4"
+  },
+  {
+    "nome_do_album": "FULL MOON",
+    "nome_da_banda": "Junko Yagami",
+    "ano_do_album": 1983,
+    "imagem_da_capa_do_album": "https://i.scdn.co/image/ab67616d0000b273bd24ea2859bda2669fe4f176",
+    "link": "https://open.spotify.com/intl-pt/album/4GFqpcjVjJkxYA4xx9Nn0N"
+  },
+  {
+    "nome_do_album": "At Night, Alone",
+    "nome_da_banda": "Mike Posner",
+    "ano_do_album": 2016,
+    "imagem_da_capa_do_album": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMgENBlPAOWN4A_PN17Jx9x8BH3a_YWnL304eUy4QY3aIIVzY9R5qY3bi19Lv7gjcJw8w&usqp=CAU",
+    "link": "https://open.spotify.com/intl-pt/album/6Phl1V5P0sPrWJytXHGFeO"
+  },
+  {
+    "nome_do_album": "Label 67",
+    "nome_da_banda": "Atitude 67",
+    "ano_do_album": 2020,
+    "imagem_da_capa_do_album": "https://akamai.sscdn.co/letras/360x360/albuns/a/2/d/3/745321562335424.jpg",
+    "link": "https://open.spotify.com/intl-pt/album/3EipZjFInVdWgrda8PgoZf"
+  },
+  {
+    "nome_do_album": "MC Leozinho",
+    "nome_da_banda": "Se Ela Dança, Eu Danço",
     "ano_do_album": 2006,
-    "imagem_da_capa_do_album": "https://upload.wikimedia.org/wikipedia/en/6/67/Amy_Winehouse_-_Back_to_Black_%28album%29.png"
+    "imagem_da_capa_do_album": "https://akamai.sscdn.co/uploadfile/letras/albuns/0/6/7/8/11553.jpg",
+    "link": "https://music.youtube.com/channel/UCCIXcMUkzdednnKrRTWXsZQ"
   },
   {
-    "nome_do_album": "A Rush of Blood to the Head",
-    "nome_da_banda": "Coldplay",
-    "ano_do_album": 2002,
-    "imagem_da_capa_do_album": "https://upload.wikimedia.org/wikipedia/en/6/60/Coldplay_-_A_Rush_of_Blood_to_the_Head_Cover.png"
+    "nome_do_album": "After Hours",
+    "nome_da_banda": "The Weeknd",
+    "ano_do_album": 2020,
+    "imagem_da_capa_do_album": "https://m.media-amazon.com/images/I/813XseYNw1L._UF1000,1000_QL80_.jpg",
+    "link": "https://open.spotify.com/intl-pt/album/4yP0hdKOZPNshxUOjY0cZj"
+  },
+  {
+    "nome_do_album": "Random Access Memories",
+    "nome_da_banda": "Daft Punk",
+    "ano_do_album": 2013,
+    "imagem_da_capa_do_album": "https://i1.sndcdn.com/artworks-000137479333-rpqogd-t500x500.jpg",
+    "link": "https://open.spotify.com/intl-pt/album/4m2880jivSbbyEGAKfITCa"
   },
   {
     "nome_do_album": "The Marshall Mathers LP",
     "nome_da_banda": "Eminem",
     "ano_do_album": 2000,
-    "imagem_da_capa_do_album": "https://upload.wikimedia.org/wikipedia/en/a/ae/The_Marshall_Mathers_LP.jpg"
+    "imagem_da_capa_do_album": "https://i.scdn.co/image/ab67616d0000b273dbb3dd82da45b7d7f31b1b42",
+    "link": "https://open.spotify.com/intl-pt/album/6t7956yu5zYf5A829XRiHC"
   },
   {
-    "nome_do_album": "In Rainbows",
-    "nome_da_banda": "Radiohead",
-    "ano_do_album": 2007,
-    "imagem_da_capa_do_album": "https://upload.wikimedia.org/wikipedia/en/1/14/Inrainbowscover.png"
+    "nome_do_album": "Heaven Knows",
+    "nome_da_banda": "PinkPantheress",
+    "ano_do_album": 2023,
+    "imagem_da_capa_do_album": "https://upload.wikimedia.org/wikipedia/en/2/20/PinkPantheress_-_Heaven_Knows.png",
+    "link": "https://open.spotify.com/intl-pt/album/2pOEFqvfxp5uUQ8vQEmVA0"
   },
   {
-    "nome_do_album": "The Eminem Show",
-    "nome_da_banda": "Eminem",
-    "ano_do_album": 2002,
-    "imagem_da_capa_do_album": "https://upload.wikimedia.org/wikipedia/en/3/35/The_Eminem_Show.jpg"
+    "nome_do_album": "Em Sua Direção",
+    "nome_da_banda": "Péricles",
+    "ano_do_album": 2018,
+    "imagem_da_capa_do_album": "https://i.scdn.co/image/ab67616d0000b2732de4d72ae0fab9e563ee4acf",
+    "link": "https://open.spotify.com/intl-pt/album/2ki501yEODlxPWKSRMnMDl"
   },
   {
-    "nome_do_album": "Hot Fuss",
-    "nome_da_banda": "The Killers",
-    "ano_do_album": 2004,
-    "imagem_da_capa_do_album": "https://upload.wikimedia.org/wikipedia/en/1/17/The_Killers_-_Hot_Fuss.png"
+    "nome_do_album": "Alma Brasileira (Ao Vivo)",
+    "nome_da_banda": "Diogo Nogueira",
+    "ano_do_album": 2016,
+    "imagem_da_capa_do_album": "https://i.scdn.co/image/ab67616d0000b273a3867a19c1d2fae11a1424e6",
+    "link": "https://open.spotify.com/intl-pt/album/5yUuIL8h5dfNO0OBuvZHLE"
   },
   {
-    "nome_do_album": "Elephant",
-    "nome_da_banda": "The White Stripes",
-    "ano_do_album": 2003,
-    "imagem_da_capa_do_album": "https://upload.wikimedia.org/wikipedia/en/1/11/Elephant%2C_The_White_Stripes.png"
+    "nome_do_album": "Tim Maia e Convidados",
+    "nome_da_banda": "Tim Maia",
+    "ano_do_album": 1977,
+    "imagem_da_capa_do_album": "https://upload.wikimedia.org/wikipedia/en/thumb/2/28/Coldplay_X%26Y.svg/1920px-Coldplay_X%26Y.svg.png",
+    "link": "https://open.spotify.com/intl-pt/album/59NOU4R72nphHRtwQlGfjJ"
   },
   {
-    "nome_do_album": "Discovery",
-    "nome_da_banda": "Daft Punk",
-    "ano_do_album": 2001,
-    "imagem_da_capa_do_album": "https://upload.wikimedia.org/wikipedia/en/2/27/Daft_Punk_-_Discovery.png"
+    "nome_do_album": "Toquinho",
+    "nome_da_banda": "Toquinho",
+    "ano_do_album": 1970,
+    "imagem_da_capa_do_album": "https://lh3.googleusercontent.com/proxy/YebrNRpnCrYE8cl-ASrJhOtKdsFqiHmnPzpl0ps-KwplryxyNNfYXQKvK61TDVt6S0-E3pxM0JgX5ICzeHhd9qe85SVj5sXmM09ekbvmhASZikKxM2m180Kdm0n89lbwCyiXWBXlapjintlshgfm",
+    "link": "https://music.youtube.com/playlist?list=OLAK5uy_kGoCgadUfljX0SGkqP6ivqlEBS0obQ1mA"
   },
   {
-    "nome_do_album": "Absolution",
-    "nome_da_banda": "Muse",
-    "ano_do_album": 2003,
-    "imagem_da_capa_do_album": "https://upload.wikimedia.org/wikipedia/en/b/b4/Muse_-_Absolution_Cover_UK.jpg"
+    "nome_do_album": "Máquina do Tempo",
+    "nome_da_banda": "Matuê",
+    "ano_do_album": 2020,
+    "imagem_da_capa_do_album": "https://s2-g1.glbimg.com/4YCTQOs7a47qPX73Lm25vw3rows=/0x0:1600x1600/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2020/W/A/7wBV8eTXeqgitO5JASRg/capa-matue-mdt.jpg",
+    "link": "https://open.spotify.com/intl-pt/album/6ehm0SMBBoSxH8oSrFXre6"
   },
   {
-    "nome_do_album": "Viva la Vida or Death and All His Friends",
-    "nome_da_banda": "Coldplay",
-    "ano_do_album": 2008,
-    "imagem_da_capa_do_album": "https://upload.wikimedia.org/wikipedia/en/b/b2/Coldplay_-_Viva_la_Vida_or_Death_and_All_His_Friends.png"
-  },
-  {
-    "nome_do_album": "Stankonia",
-    "nome_da_banda": "OutKast",
-    "ano_do_album": 2000,
-    "imagem_da_capa_do_album": "https://upload.wikimedia.org/wikipedia/en/0/0b/OutKast_-_Stankonia.JPG"
-  },
-  {
-    "nome_do_album": "Speakerboxxx/The Love Below",
-    "nome_da_banda": "OutKast",
-    "ano_do_album": 2003,
-    "imagem_da_capa_do_album": "https://upload.wikimedia.org/wikipedia/en/4/47/Outkast-speakerboxx-lovebelow.jpg"
-  },
-  {
-    "nome_do_album": "X&Y",
-    "nome_da_banda": "Coldplay",
-    "ano_do_album": 2005,
-    "imagem_da_capa_do_album": "https://upload.wikimedia.org/wikipedia/en/thumb/2/28/Coldplay_X%26Y.svg/1920px-Coldplay_X%26Y.svg.png"
-  },
-  {
-    "nome_do_album": "Whatever People Say I Am, That's What I'm Not",
-    "nome_da_banda": "Arctic Monkeys",
-    "ano_do_album": 2006,
-    "imagem_da_capa_do_album": "https://upload.wikimedia.org/wikipedia/en/8/88/Whatever_People_Say_I_Am%2C_That%27s_What_I%27m_Not_%282006_Arctic_Monkeys_album%29.jpg"
-  },
-  {
-    "nome_do_album": "Black Holes and Revelations",
-    "nome_da_banda": "Muse",
-    "ano_do_album": 2006,
-    "imagem_da_capa_do_album": "https://upload.wikimedia.org/wikipedia/en/c/c5/BlackHolesCover.jpg"
-  },
-  {
-    "nome_do_album": "Fever to Tell",
-    "nome_da_banda": "Yeah Yeah Yeahs",
-    "ano_do_album": 2003,
-    "imagem_da_capa_do_album": "https://upload.wikimedia.org/wikipedia/en/0/0b/Yeah_Yeah_Yeahs_-_Fever_to_Tell.png"
+    "nome_do_album": "Love Island: Pool Party 2019",
+    "nome_da_banda": "Amerie",
+    "ano_do_album": 2019,
+    "imagem_da_capa_do_album": "https://upload.wikimedia.org/wikipedia/en/8/88/Amerie_-_1_Thing.png",
+    "link": "https://www.google.com/search?sca_esv=59a29399512378e1&rlz=1C1GCEU_pt-BRBR1095BR1095&q=1+thing+love+island:+pool+party+2019+-+ministry+of+sound&si=AKbGX_rO4P19IF_yO85wYpkEaz-W_oZWd5JUOOVnUVftf2aeoXP4sfYmHWs581PHBda9zuniR66pzmLzMUncSGXvqUY2a5WHh8E4HJpULRUWh4kPxkoImBnmADmJdTN8Y6fPDyUvCkp0Usm6ZNqGGqNhBCHiGfEvJqKbFQt37A9DtQptNGkbamz_aysApZJin8Idn05W2rRSQD9q3SvEGfZGMw5R3FlHotMVnTxKaTOFMlmWrVL6RsmTNynsWuOJyHWf1jHNvO0wh3bsi6rt7vVw_7v_XbqqNg%3D%3D&sa=X&ved=2ahUKEwili4_Ut4-EAxWJBrkGHe-lBV0QmxMoAHoECDYQAg&biw=1440&bih=773&dpr=1"
   }
 ]
 
@@ -147,9 +165,11 @@ function organizaEmLinhasEColunas(albuns) {
 function criaCardHtmlParaAlbum(album) {
   return `
   <div class="card col-4">
-    <img class="card-img-top"
-      src="${album.imagem_da_capa_do_album}"
+    <a href="${album.link}">
+      <img class="card-img-top"
+        src="${album.imagem_da_capa_do_album}"
       alt="">
+    </a>
     <div class="card-body">
       <h5 class="card-title">${album.nome_do_album}</h5>
       <p class="card-text">${album.nome_da_banda} - <b>${album.ano_do_album}</b></p>
@@ -181,5 +201,13 @@ function atualizaListaDeAlbuns() {
   const listaDeAlbuns = document.getElementById("album-list")
 
   listaDeAlbuns.replaceWith(criaListaDeAlbuns(organizaEmLinhasEColunas(meusAlbuns)))
+}
+
+atualizaListaDeAlbuns();
+
+function randomizacao() {
+  const listaDeAlbuns = document.getElementById("album-list")
+
+  listaDeAlbuns.replaceWith(criaListaDeAlbuns(organizaEmLinhasEColunas(meusAlbuns.sort(() => Math.random() - 0.5))))
 }
 
