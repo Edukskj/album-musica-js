@@ -122,7 +122,7 @@ const meusAlbuns = [
     "nome_do_album": "Toquinho",
     "nome_da_banda": "Toquinho",
     "ano_do_album": 1970,
-    "imagem_da_capa_do_album": "https://lh3.googleusercontent.com/proxy/YebrNRpnCrYE8cl-ASrJhOtKdsFqiHmnPzpl0ps-KwplryxyNNfYXQKvK61TDVt6S0-E3pxM0JgX5ICzeHhd9qe85SVj5sXmM09ekbvmhASZikKxM2m180Kdm0n89lbwCyiXWBXlapjintlshgfm",
+    "imagem_da_capa_do_album": "https://lh3.googleusercontent.com/proxy/VfY4_MjmC0yCXU6t-9nn-6w71M1BFOVXWlCpyESptD5b_JJCDrRDyq681UQOA5c9tb5emdb_SoiX5Kh-3BOI5DH-CDYwfnK3Xb4YhZYh95HN5hmVb2lzgn46hM6JnDGJysis0iDsKBEYtXrcy0hz",
     "link": "https://music.youtube.com/playlist?list=OLAK5uy_kGoCgadUfljX0SGkqP6ivqlEBS0obQ1mA"
   },
   {
@@ -142,7 +142,7 @@ const meusAlbuns = [
 ]
 
 function organizaEmLinhasEColunas(albuns) {
-  const numeroDeColunas = 3
+  const numeroDeColunas = 999
   const numeroDeLinhas = Math.ceil(albuns.length / numeroDeColunas)
 
   let linhas = new Array(numeroDeLinhas)
@@ -210,4 +210,30 @@ function randomizacao() {
 
   listaDeAlbuns.replaceWith(criaListaDeAlbuns(organizaEmLinhasEColunas(meusAlbuns.sort(() => Math.random() - 0.5))))
 }
+
+// Search Input
+
+const searchInput = document.getElementById("searchInput");
+const albumNames = document.getElementsByClassName("card-title");
+
+searchInput.addEventListener("keyup", (event) => {
+  const { value } = event.target;
+  
+  // get user search input converted to lowercase
+  const searchQuery = value.toLowerCase();
+  
+  for (const nameElement of albumNames) {
+      // store name text and convert to lowercase
+      let name = nameElement.textContent.toLowerCase();
+      
+      // compare current name to search input
+      if (name.includes(searchQuery)) {
+          // found name matching search, display it
+          nameElement.parentElement.parentElement.style.display = "block";
+      } else {
+          // no match, don't display name
+          nameElement.parentElement.parentElement.style.display = "none";
+      }
+  }
+});
 
