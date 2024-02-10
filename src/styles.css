@@ -6,3 +6,7 @@ img:hover {
     border: 5px solid;
     border-color: rgb(43, 43, 255);
 }
+
+.add {
+    display: block;
+}
