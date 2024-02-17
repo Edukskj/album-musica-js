@@ -29,11 +29,13 @@
     </div>
   </nav>
 
-  <div class="container my-5">
+  <div class="container my-5" id="buttons">
     <button type="button" class="btn btn-primary" onclick="randomizacao()">Randomizar Ordem</button>
+    <button type="button" class="btn btn-primary" onclick="show()">Adicionar Album</button>
   </div>
 
-  <div class="container my-5">
+
+  <div class="container my-5" id="albuns">
     <h1>Seus Albuns</h1>
     <p class="fs-5">Todos os seus albuns estão logo abaixo:</p>
     <hr class="col-1 my-4">
@@ -42,21 +44,56 @@
     </div>
   </div>
 
-  <div class="container my-5">
-    <form action="index.html">
-      <h1>Adicionar um Álbum</h1>
-      <br>
-      <label>Nome do Album</label>
-      <input class="add" type="text" name="nome_do_album">
-      <label>Nome da Banda</label>
-      <input class="add" type="text" name="nome_da_banda">
-      <label>Ano de Lançamento</label>
-      <input class="add" type="text" name="ano_do_album">
-      <label>Endereço da Imagem do Álbum</label>
-      <input class="add" type="text" name="imagem_da_capa_do_album">
-      <label>Link do Album</label>
-      <input class="add" type="text" name="link">
-    </form>
+  <!-- Add music Form, its show if you click at add button -->
+
+  <div class="container my-5" id="back" style="display: none;">
+    <button type="button" class="btn btn-primary" onclick="voltar()">Voltar</button>
+  </div>
+
+  <div class="container my-5" id="form" style="display: none;">
+    <div class="background">
+      <form action="index.html" id="addForm">
+        <h1>Adicionar um Álbum</h1>
+        <br>
+        <label class="lbl">Nome do Album</label>
+        <input class="add" type="text" id="nome_do_album">
+        <label class="lbl">Nome da Banda</label>
+        <input class="add" type="text" id="nome_da_banda">
+        <label class="lbl">Ano de Lançamento</label>
+        <input class="add" type="text" id="ano_do_album">
+        <label class="lbl">Endereço da Imagem do Álbum</label>
+        <input class="add" type="text" id="imagem_da_capa_do_album">
+        <label class="lbl">Link do Album</label>
+        <input class="add" type="text" id="link">
+        <button class="btn btn-primary" id="addbtn" type="submit">Adicionar</button>
+
+        <script>
+          let loginForm = document.getElementById("addForm");
+
+          loginForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            let nome_do_album = document.getElementById("nome_do_album");
+            let nome_da_banda = document.getElementById("nome_da_banda");
+            let ano_do_album = document.getElementById("ano_do_album");
+            let imagem_da_capa_do_album = document.getElementById("imagem_da_capa_do_album");
+            let link = document.getElementById("link");
+
+            meusAlbuns.push({
+              "nome_do_album": `${nome_do_album.value}`,
+              "nome_da_banda": `${nome_da_banda.value}`,
+              "ano_do_album": `${ano_do_album.value}`,
+              "imagem_da_capa_do_album": `${imagem_da_capa_do_album.value}`,
+              "link": `${link.value}`
+            });
+
+            document.getElementById("albuns").style.display = "";
+            document.getElementById("form").style.display = "none";
+            document.getElementById("buttons").style.display = "";
+            document.getElementById("back").style.display = "none";});
+        </script>
+      </form>
+    </div>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"

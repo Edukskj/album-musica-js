@@ -122,7 +122,7 @@ const meusAlbuns = [
     "nome_do_album": "Toquinho",
     "nome_da_banda": "Toquinho",
     "ano_do_album": 1970,
-    "imagem_da_capa_do_album": "https://lh3.googleusercontent.com/proxy/VfY4_MjmC0yCXU6t-9nn-6w71M1BFOVXWlCpyESptD5b_JJCDrRDyq681UQOA5c9tb5emdb_SoiX5Kh-3BOI5DH-CDYwfnK3Xb4YhZYh95HN5hmVb2lzgn46hM6JnDGJysis0iDsKBEYtXrcy0hz",
+    "imagem_da_capa_do_album": "https://akamai.sscdn.co/letras/360x360/albuns/4/7/f/b/869201585152394.jpg",
     "link": "https://music.youtube.com/playlist?list=OLAK5uy_kGoCgadUfljX0SGkqP6ivqlEBS0obQ1mA"
   },
   {
@@ -236,4 +236,20 @@ searchInput.addEventListener("keyup", (event) => {
       }
   }
 });
+
+// Album form
+
+function show() {
+  document.getElementById("albuns").style.display = "none";
+  document.getElementById("form").style.display = "";
+  document.getElementById("buttons").style.display = "none";
+  document.getElementById("back").style.display = "";
+}
+
+function voltar() {
+  document.getElementById("albuns").style.display = "";
+  document.getElementById("form").style.display = "none";
+  document.getElementById("buttons").style.display = "";
+  document.getElementById("back").style.display = "none";
+}
 
