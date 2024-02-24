@@ -281,8 +281,16 @@ function adicionar() {
 
       alert("Álbum inserido com sucesso!");
       atualizaListaDeAlbuns();
+
+      document.getElementById('nome_do_album').value='';
+      document.getElementById('nome_da_banda').value='';
+      document.getElementById('ano_do_album').value='';
+      document.getElementById('imagem_da_capa_do_album').value='';
+      document.getElementById('link').value='';
     } else {
       alert("Insira todas as informações!");
     } 
   });
 }
+
+adicionar();
