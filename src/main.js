@@ -253,3 +253,37 @@ function voltar() {
   document.getElementById("back").style.display = "none";
 }
 
+function adicionar() {
+  let loginForm = document.getElementById("addForm");
+
+  loginForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    let nome_do_album = document.getElementById("nome_do_album");
+    let nome_da_banda = document.getElementById("nome_da_banda");
+    let ano_do_album = document.getElementById("ano_do_album");
+    let imagem_da_capa_do_album = document.getElementById("imagem_da_capa_do_album");
+    let link = document.getElementById("link");
+
+    if (nome_do_album.value !== "" && nome_da_banda.value !== "" && ano_do_album.value !== "" && imagem_da_capa_do_album !== "" && link.value !== "") {
+      meusAlbuns.push({
+        "nome_do_album": `${nome_do_album.value}`,
+        "nome_da_banda": `${nome_da_banda.value}`,
+        "ano_do_album": `${ano_do_album.value}`,
+        "imagem_da_capa_do_album": `${imagem_da_capa_do_album.value}`,
+        "link": `${link.value}`
+      });
+
+      document.getElementById("albuns").style.display = "";
+      document.getElementById("form").style.display = "none";
+      document.getElementById("buttons").style.display = "";
+      document.getElementById("back").style.display = "none";
+
+      alert("Álbum inserido com sucesso!");
+      atualizaListaDeAlbuns();
+    } else {
+      alert("Insira todas as informações!");
+    } 
+  });
+}
+
