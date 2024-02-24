@@ -286,5 +286,3 @@ function adicionar() {
     } 
   });
 }
-
-// eae
