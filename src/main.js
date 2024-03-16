@@ -139,7 +139,18 @@ const meusAlbuns = [
     "imagem_da_capa_do_album": "https://upload.wikimedia.org/wikipedia/en/8/88/Amerie_-_1_Thing.png",
     "link": "https://www.google.com/search?sca_esv=59a29399512378e1&rlz=1C1GCEU_pt-BRBR1095BR1095&q=1+thing+love+island:+pool+party+2019+-+ministry+of+sound&si=AKbGX_rO4P19IF_yO85wYpkEaz-W_oZWd5JUOOVnUVftf2aeoXP4sfYmHWs581PHBda9zuniR66pzmLzMUncSGXvqUY2a5WHh8E4HJpULRUWh4kPxkoImBnmADmJdTN8Y6fPDyUvCkp0Usm6ZNqGGqNhBCHiGfEvJqKbFQt37A9DtQptNGkbamz_aysApZJin8Idn05W2rRSQD9q3SvEGfZGMw5R3FlHotMVnTxKaTOFMlmWrVL6RsmTNynsWuOJyHWf1jHNvO0wh3bsi6rt7vVw_7v_XbqqNg%3D%3D&sa=X&ved=2ahUKEwili4_Ut4-EAxWJBrkGHe-lBV0QmxMoAHoECDYQAg&biw=1440&bih=773&dpr=1"
   }
-]
+];
+
+// Add LocalStorage
+
+let albumStorage = "albuns";
+
+localStorage.setItem(albumStorage,JSON.stringify(meusAlbuns));
+let data = localStorage.getItem(albumStorage);
+
+const userData = JSON.parse(data);
+
+// Functions
 
 function organizaEmLinhasEColunas(albuns) {
   const numeroDeColunas = 999
@@ -160,7 +171,7 @@ function organizaEmLinhasEColunas(albuns) {
   }
 
   return linhas
-}
+};
 
 function criaCardHtmlParaAlbum(album) {
   return `
@@ -176,14 +187,14 @@ function criaCardHtmlParaAlbum(album) {
     </div>
   </div>
   `
-}
+};
 
 function criaLinhaDeAlbuns(uma_linha) {
   const div = document.createElement("div")
   div.classList.add("row")
   div.innerHTML = uma_linha.map(coluna => criaCardHtmlParaAlbum(coluna)).join("\n")
   return div
-}
+};
 
 function criaListaDeAlbuns(linhas) {
   const div = document.createElement("div")
@@ -195,13 +206,13 @@ function criaListaDeAlbuns(linhas) {
   });
 
   return div
-}
+};
 
 function atualizaListaDeAlbuns() {
   const listaDeAlbuns = document.getElementById("album-list")
 
   listaDeAlbuns.replaceWith(criaListaDeAlbuns(organizaEmLinhasEColunas(meusAlbuns)))
-}
+};
 
 atualizaListaDeAlbuns();
 
@@ -209,7 +220,7 @@ function randomizacao() {
   const listaDeAlbuns = document.getElementById("album-list")
 
   listaDeAlbuns.replaceWith(criaListaDeAlbuns(organizaEmLinhasEColunas(meusAlbuns.sort(() => Math.random() - 0.5))))
-}
+};
 
 // Search Input
 
