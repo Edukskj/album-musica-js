@@ -1,11 +1,20 @@
 // Add LocalStorage
 
+let userData = [];
 let albumStorage = "albuns";
 let data = localStorage.getItem(albumStorage);
-let userData = [];
 
 if (JSON.parse(data) != null) {
   userData = JSON.parse(data);
+}
+
+// Refresh Data (storage)
+
+window.onstorage = () => {
+  window.localStorage.getItem(albumStorage);
+  data = localStorage.getItem(albumStorage);
+  userData = JSON.parse(data);
+  atualizaListaDeAlbuns();
 }
 
 // Functions
@@ -71,11 +80,8 @@ function atualizaListaDeAlbuns() {
   listaDeAlbuns.replaceWith(criaListaDeAlbuns(organizaEmLinhasEColunas(userData)))
 };
 
-atualizaListaDeAlbuns();
-
 function randomizacao() {
   const listaDeAlbuns = document.getElementById("album-list")
-
   listaDeAlbuns.replaceWith(criaListaDeAlbuns(organizaEmLinhasEColunas(userData.sort(() => Math.random() - 0.5))))
 };
 
@@ -164,3 +170,4 @@ function adicionar() {
 }
 
 adicionar();
+atualizaListaDeAlbuns();
